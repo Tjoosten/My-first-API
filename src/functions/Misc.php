@@ -1,7 +1,7 @@
 <?php
-  namespace Functions\Api\Misc;
+  namespace Joosten\Api\functions;
 
-  Class MiscFunctions {
+  Class Misc {
 
     protected $api;
 
@@ -17,7 +17,7 @@
           'Title'    => ' API | Home'
         ];
 
-        $api->render('/home.php', $variables);
+        $this->api->render('/home.php', $variables);
       }
     }
   }
