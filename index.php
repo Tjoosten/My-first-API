@@ -11,28 +11,20 @@
   require 'vendor/autoload.php';
 
   use Joosten\Api\functions\Errors;
-
-  $errors = new Errors($api);
-  $mysqli = new mysqli('localhost','root','2fU3g5Yn','sn1145_scouts');
+  use Joosten\Api\functions\Misc;
   $api    = new \Slim\Slim(array(
               'templates.path' => 'src/views',
               'log.enabled'    => true,
               'debug'          => true
             ));
 
+  $errors = new Errors($api);
+  $misc   = new Misc($api);
+  $mysqli = new mysqli('localhost','root','2fU3g5Yn','sn1145_scouts');
+
   $api->notFound($errors->notFound());
 
-  $api->get('/', function() use($api) {
-    if (php_sapi_name() == "cli") {
-        echo '{"Info": "This highly trained monkey is working"}';
-    } else {
-      $variables = [
-        'Title'    => ' API | Home'
-      ];
-
-      $api->render('/home.php', $variables);
-    }
-  });
+  $api->get('/', $misc->frontPage());
 
   $api->get('/help', function() use($api) {
     if (php_sapi_name() == "cli") {
