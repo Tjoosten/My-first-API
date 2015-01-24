@@ -12,16 +12,15 @@
 
   use Joosten\Api\functions\Errors;
 
+  $errors = new Errors($api);
   $mysqli = new mysqli('localhost','root','2fU3g5Yn','sn1145_scouts');
   $api    = new \Slim\Slim(array(
               'templates.path' => 'src/views',
               'log.enabled'    => true,
               'debug'          => true
             ));
-            
-  $errors = new Errors($api);
-  
-            $api->notFound($errors->notFound());
+
+  $api->notFound($errors->notFound());
 
   $api->get('/', function() use($api) {
     if (php_sapi_name() == "cli") {
