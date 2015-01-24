@@ -1,5 +1,5 @@
 {
-  "name": "tim/ion-auth",
+  "name": "tim/my-first-api",
   "description": "Managing package for IonAuth",
   "require": {
     "slim/slim": "~2.5"
