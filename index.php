@@ -10,16 +10,17 @@
    **/
   require 'vendor/autoload.php';
 
-  use Joosten\Api\functions\Errors;
-  use Joosten\Api\functions\Misc;
+  use Functions\Api\Errors\ErrorsFunctions;
+  use Functions\Api\Misc\MicsFunctions;
+
   $api    = new \Slim\Slim(array(
               'templates.path' => 'src/views',
               'log.enabled'    => true,
               'debug'          => true
             ));
 
-  $errors = new Errors($api);
-  $misc   = new Misc($api);
+  $errors = new ErrorsFunctions($api);
+  $misc   = new MiscFunctions($api);
   $mysqli = new mysqli('localhost','root','2fU3g5Yn','sn1145_scouts');
 
   $api->notFound($errors->notFound());

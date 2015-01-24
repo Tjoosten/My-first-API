@@ -1,7 +1,7 @@
 <?php
-  namespace Joosten\Api\functions;
+  namespace Functions\Api\Errors;
 
-  Class Errors {
+  Class ErrorsFunctions {
 
     protected $api;
 

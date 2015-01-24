@@ -14,7 +14,8 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Joosten\\Api\\": "src/"
+      "Joosten\\Api\\": "src/",
+      "Functions\\Api\\": "src/functions"
     }
   }
 }

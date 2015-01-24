@@ -1,7 +1,7 @@
 <?php
-  namespace Joosten\Api\functions;
+  namespace Functions\Api\Misc;
 
-  Class Misc {
+  Class MiscFunctions {
 
     protected $api;
 
