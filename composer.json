@@ -1,0 +1,20 @@
+{
+  "name": "tim/ion-auth",
+  "description": "Managing package for IonAuth",
+  "require": {
+    "slim/slim": "~2.5"
+  },
+  "license": "MIT License",
+  "authors": [
+    {
+      "name": "Tim Joosten",
+      "email": "Topairy@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Joosten\\Api\\": "src/"
+    }
+  }
+}
